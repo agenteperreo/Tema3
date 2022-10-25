@@ -7,7 +7,7 @@ public class Ejercicio1 {
 	public static void main(String[] args) {
 	
 		//Declaramos las variables
-		int res=0, num, cont=0;
+		int res=0, num;
 		
 		//Abrimos el escaner
 		Scanner sc = new Scanner(System.in);
@@ -20,12 +20,10 @@ public class Ejercicio1 {
 		while (num>=0) {
 			res+=num;
 			num=sc.nextInt();
-			cont++;
 		}
 		
 		//Mostramos el resultado
 		System.out.printf("El resultado de la suma es: %d\n",res);
-		System.out.printf("Has sumado %d numeros",cont);
 		
 		//Cerramos el escaner
 		sc.close();
