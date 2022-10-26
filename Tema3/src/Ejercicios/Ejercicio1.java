@@ -17,9 +17,9 @@ public class Ejercicio1 {
 		num=sc.nextInt();
 		
 		//While
-		while (num>=0) {
-			res+=num;
-			num=sc.nextInt();
+		while (num>=0) { //Seguir si el numero es mayor o igual que0
+			res+=num; //Sumar el numero al resultado
+			num=sc.nextInt(); //Seguimos pidiendo numeros
 		}
 		
 		//Mostramos el resultado
