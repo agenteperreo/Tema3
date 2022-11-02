@@ -18,10 +18,20 @@ public class Ejercicio3 {
 		num=sc.nextInt();
 		
 		do {
-			numeros++;
-			suma+=numeros;
-		}while(numeros<num);
+			numeros++; //Aumentamos uno la variable que va a sumarse a la variable suma
+			suma+=numeros; //Le sumamos
+			if (numeros<num) { //si el numero es mayor a la variable que se suma
+				System.out.printf("%d+",numeros); //Mostramos el numero con un + detras
+			} else { //Si no
+				System.out.printf("%d",numeros); //Mostramos el numero solo
+			}
+		}while(numeros<num); //Mientras el numero sea mayor que la variable que se suma
 
+		//Mostramos el resultado de la suma
+		System.out.printf("=%d",suma); 
+		
+		//Cerramos el escaner
+		sc.close();
 	}
 
 }
