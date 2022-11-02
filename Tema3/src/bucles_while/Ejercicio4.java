@@ -1,4 +1,4 @@
-package Ejercicios;
+package bucles_while;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Ejercicios;
+package bucles_while;
 
 import java.util.Scanner;
 
@@ -41,7 +41,7 @@ public class Ejercicio6 {
 		System.out.printf("La cantidad de niños mayores de edad es %d\n",contM);
 		
 		//Cerramos el escaner
-		sc.close();
+		sc.close();	
 
 	}
 
