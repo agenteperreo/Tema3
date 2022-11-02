@@ -24,7 +24,14 @@ public class Ejercicio5 {
 			System.out.println(numAl);
 			num=sc.next();
 			
+			if (num.equals("M")) {
+				
+			}
+			
 		}while(num!="I");
+		
+		//Cerramos el escaner
+		sc.close();
 	}
 
 }
