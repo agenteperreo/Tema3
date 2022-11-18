@@ -12,7 +12,14 @@ public class Ejercicio4 {
 	 * lo que se acaba de explicar, realiza un programa que calcule el máximo común
 	 * divisor de dos números.
 	 */
+	
 	public static void main(String[] args) {
+		
+		/*PRUEBAS
+		 * a=18 b=26 -> "El maximo comun divisor es 2"
+		 * a=10 b=5 -> "El maximo comun divisor es 5"
+		 * a=23562 b=15673 -> "El maximo comun divisor es 7"
+		*/
 
 		// Declaramos las variables
 		int a, b, menor, MCD = 0;
@@ -25,7 +32,7 @@ public class Ejercicio4 {
 		a = sc.nextInt();
 		b = sc.nextInt();
 
-		// comprobamos quien es le menor
+		// Comprobamos quien es el menor
 		if (a < b) {
 			menor = a;
 		} else {
