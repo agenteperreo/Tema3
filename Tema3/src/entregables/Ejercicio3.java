@@ -51,7 +51,7 @@ public class Ejercicio3 {
 			for(int j=1; j<=i; j++) {
 				System.out.print("* "); //Mostramos
 			}
-			System.out.println(); //saltamos de linea para formar la piramide
+			System.out.println(); //Saltamos de linea para formar la piramide
 		}
 		
 		//Cerramos el escaner
