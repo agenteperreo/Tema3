@@ -5,56 +5,59 @@ import java.util.Scanner;
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
+		
+		/*PRUEBAS
+		 * num=5 -> "Entre 1 y 5 hay 3 nÃºmeros primos"
+		 * num=9 -> "Entre 1 y 9 hay 4 nÃºmeros primos"
+		 * num=2 -> "Entre 1 y 2 hay 1 nÃºmeros primos"
+		*/
 
-		// Declaramos variables.
-		int num;// Se guardará el número introducido por el usuario.
-		boolean esPrimo = true;// Se guardará el valor esPrimo como true.
-		int contador = 0;// Inicializamos un contador a 0.
+		//DeclaraciÃ³n de variables
+		int num; //Numero introducido por el usuario
+		int cont = 0; //Variable contador para saber cuantos numeros primos hay
 		
-		// Abrimos el Scanner.
+		//Abrimos el escaner
 		Scanner sc = new Scanner(System.in);
-		
-		// Solicitamos al usuario un número.
-		System.out.println("Introduzca un número para saber todos los número primos hasta él: ");
+
+		//Pedimos el numero al usuario
+		System.out.print("Dime un nÃºmero: ");
 		num = sc.nextInt();
-		
-		// Si el numero se mayor que 0.
+
+		//Si el nnumero es mayor que 0
 		if (num > 0) {
-			/*
-			 * Creamos un for, donde declaramos e inicializamos la variable i=2. Ponemos la
-			 * condición de que i debe ser menor a num. Por cada iteración se incrementará i
-			 * con a
-			 */
-			for (int i = 2; i < num; i++) {
-				// En el caso, de que se cumpla la condición
-				esPrimo = true;
-				/*
-				 * Creamos un Scanner, donde declaramos e inicializamos j=2. Ponemos la
-				 * condición de que j debe ser menor a i. Por cada iteración se le sumará a j, 1
-				 */
-				for (int j = 2; j <= i; j++) {
-					/*
-					 * Una vez que entre en el bucle, se hará el módulo de num, en el caso de que
-					 * tenga un divisor diferente a 1 o al propio num, la variable se convenrtirá en
-					 * false y saldrá del bucle
-					 */
-					if (i % j  == 0) {
-						esPrimo = false;
+
+			// Repetimos lo de dentro hasta que i sea mayor que el numero del usuario
+			for (int i = 2; i <= num; i++) {
+				
+				//AÃ±adimos 1 al contador
+				cont++; 
+
+				//Repetimos lo de dentro hasta que j sea equivalente a i
+				for (int j = 2; j < i; j++) {
+
+					//Si el modulo de i y j es 0 no es primos
+					if (i % j == 0) {
+						//restamos 1 al contador 
+						cont--;
+						//Terminamos el 2Âº bucle for
 						break;
+					
 					}
+
 				}
+				
 			}
-			// En el caso de esPrimo sea true, se sumará uno a contador
-			if (esPrimo) {
-				contador++;
-			}
-			// En caso de que introduzca un número menor a 0, le mostrará ERROR.
-		} else {
-			System.out.println("No se ha introducido un entero positivo.");
+
+			//Mostramos la cantidad de numeros primos que hay
+			System.out.printf("Entre 1 y %d hay %d nÃºmeros primos",num,cont); 
+
+		} else { //Si el numero es menor o igual que 0
+
+			System.err.println("ERROR: Numero no valido"); // Mostramos un mensaje de error
+
 		}
-		// Como resultado, se le mostrará al usuario la cantidad de números primos.
-		System.out.println("La cantidad de números primos es " + contador);
-		// Finalmente, cerramos el Scanner
+
+		//Cerramos el escaner
 		sc.close();
 
 	}
