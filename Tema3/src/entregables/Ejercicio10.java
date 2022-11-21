@@ -20,10 +20,10 @@ public class Ejercicio10 {
 		 * num=9746 -> "No es capicua"*/
 		
 		// Declaramos variables
-		int num; // Se guardará el número introducido por el usuario
-		int reves; // Se guardará el número dado la vuelta
-		int cifras = 0; // Se guardará la descomposición del número
-		int resto;// Se guardará el resto de la división
+		int num; // Numero del usuario
+		int reves; // Numero al reves
+		int cifras = 0; // Cifras del numero
+		int resto; // Resto del modulo
 
 		// Abrimos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -38,9 +38,9 @@ public class Ejercicio10 {
 			}
 		} while (num < 0);
 
-		// Invertimos el número
+		// Equivalemos el numero a la variable reves
 		reves = num;
-		// Abrimos un while para mientras que invert sea distinto de cero:
+		// Mientras reves no sea 0
 		while (reves != 0) {
 			// Descomponemos el número
 			resto = reves % 10;
@@ -48,14 +48,13 @@ public class Ejercicio10 {
 			reves = reves / 10;
 		}
 
-		// Si num == a descomp, mostrará el siguiente mensaje, en caso contrario otro
-		// mensaje distinto.
+		// Si el numero normal es igual al numero al reves es capicua
 		if (num == cifras) {
 			System.out.println("Es capicua");
-		} else {
+		} else { // Si no no es capicúa
 			System.out.println("No es capicua");
 		}
-		// Finalmente, cerramos el Scanner
+		// Cerramos el escaner
 		sc.close();
 
 	}
