@@ -26,7 +26,7 @@ public class Ejercicio7 {
 					 123454321"
 		*/
 
-		// Declaramo variable
+		// Declaración de variables
 		int num;
 
 		// Creamos el Scanner
@@ -36,21 +36,16 @@ public class Ejercicio7 {
 		System.out.println("Introduzca un número ");
 		num = sc.nextInt();
 
-		/*
-		 * En un for, declaramos e inicializamos la variable i=1. Indicamos que i debe
-		 * ser menor igual a num. Por cada iteración, se incrementará 1 a i
-		 */
+		// Hacemos lo de dentro hast que i sea mayor que el numero del usuario
 		for (int i = 1; i <= num; i++) {
-			/*
-			 * Dentro del for, abrimos otro for y declaramos e inicializamos la variable
-			 * j=1. Indicamos que j debe ser menor o igual a j. Por cada iteración, se
-			 * incrementará 1 a j
-			 */
+			
+			// Mostramos j hast que sea mayor que i
 			for (int j = 1; j <= i; j++) {
 				// Mostramos j
 				System.out.print(j);
 			}
 
+			//Mostramos k hasta que sea igual a 0
 			for (int k = i - 1; k > 0; k--) {
 				// Mostramos k
 				System.out.print(k);
